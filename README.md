@@ -2,6 +2,12 @@
 
 This tutorial helps you set up a simple React site bundled with Webpack.
 
-Follow along step-by-step at [http://www.react.express/webpack](http://www.react.express/webpack)
+build: (if failer error (unsupport module), then setup before build
 
-![Example](react-hello-world.png)
+[linux] export NODE_OPTIONS=--openssl-legacy-provider
+[windows] set NODE_OPTIONS=--openssl-legacy-provider
+
+deploy to surge
+
+
+
