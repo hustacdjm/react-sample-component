@@ -31,7 +31,7 @@ module.exports = options => {
         
           // For remotes (please adjust)
           name: "react",
-          library: { type: "var", name: "react" },
+          library: { type: "var", name: "react_youtube" },
           filename: "remoteEntry.js", // <-- Meta Data
           exposes: {
               './web-components': './app.js',

@@ -9,5 +9,11 @@ build: (if failer error (unsupport module), then setup before build
 
 deploy to surge
 
+remoteEntry: 'https://65b2befc5750852a2ea5cc95--peppy-sable-327a3f.netlify.app/remoteEntry.js',
+            //remoteEntry: 'https://eduelite.github.io/react-app/remoteEntry.js',            
+            remoteName: 'react',
+            exposedModule: './web-components',
+            elementName: 'react-element'
+
 
 
