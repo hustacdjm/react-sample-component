@@ -32,10 +32,10 @@ class App extends React.Component {
   }
 }
 
-class Mfe4Element extends HTMLElement {
+class Mfe5Element extends HTMLElement {
   connectedCallback() {
     ReactDOM.render(<App/>, this);
   }
 }
 
-customElements.define('react-element', Mfe4Element);
+customElements.define('react-component6601e239be361e17e019bbb5', Mfe5Element);

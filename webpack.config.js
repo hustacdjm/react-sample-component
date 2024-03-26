@@ -30,11 +30,11 @@ module.exports = options => {
       new ModuleFederationPlugin({
         
           // For remotes (please adjust)
-          name: "react",
-          library: { type: "var", name: "react" },
+          name: "react6601e239be361e17e019bbb5",
+          library: { type: "var", name: "react6601e239be361e17e019bbb5" },
           filename: "remoteEntry.js", // <-- Meta Data
           exposes: {
-              './web-components': './app.js',
+              './react6601e239be361e17e019bbb5': './app.js',
           },        
           shared: ["react", "react-dom"]
         }),
