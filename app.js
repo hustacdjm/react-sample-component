@@ -1,22 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 
 const App = ({data, onUpdateData}) => {
   
     const reactVersion = require('./package.json').dependencies['react'];
     
-    return ([
-        
-        <h1 key='h1key'>
-          React
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" height="30"></img>
-        </h1>,
+    console.log(data);
+    const config = {
+      loader: { load: ["input/asciimath"] }
+    };
 
-        <p key='pkey'>
-          React Version: {reactVersion}
-        </p>      
-         
-    ])
+    return (
+      <div>
+        <MathJaxContext config={config}>
+        <h2>Basic MathJax example with Latex</h2>
+        <MathJax>{data.component.content.equation}</MathJax>
+      </MathJaxContext>
+          
+      </div>
+
+    )
   
 }
 
@@ -40,13 +44,14 @@ class Mfe5Element extends HTMLElement {
   connectedCallback() {
 
     let data = this.getAttribute("data");
+    let dataJson = JSON.parse(data);
     console.log("react component input data");
-    console.log(data);
+    console.log(dataJson);
 
-    ReactDOM.render(<App data={data} onUpdateData={this.setDataState}/>, this);
+    ReactDOM.render(<App data={dataJson} onUpdateData={this.setDataState}/>, this);
   }
 
 
 }
 
-customElements.define('react-component6601e239be361e17e019bbb5', Mfe5Element);
+customElements.define('react-component660394d5be361e17e019bbb986a28ec220424d43b271f47a3f5a801d', Mfe5Element);
