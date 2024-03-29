@@ -8,15 +8,23 @@ const App = ({data, onUpdateData}) => {
     
     console.log(data);
     const config = {
-      loader: { load: ["input/asciimath"] }
+      loader: { load: ["input/asciimath"] },
+      asciimath: {
+        displaystyle: true,
+        delimiters: [
+          ["$", "$"],
+          ["`", "`"]
+        ]
+      }
     };
 
     return (
       <div>
-        <MathJaxContext config={config}>
-        <h2>Basic MathJax example with Latex</h2>
+
+        {data.component.ui.showDescription?( <div dangerouslySetInnerHTML={{ __html: data.component.content.description }} />):<div/>}
+        <MathJaxContext config={config}>        
         <MathJax>{data.component.content.equation}</MathJax>
-      </MathJaxContext>
+        </MathJaxContext>
           
       </div>
 
@@ -54,4 +62,4 @@ class Mfe5Element extends HTMLElement {
 
 }
 
-customElements.define('react-component660394d5be361e17e019bbb986a28ec220424d43b271f47a3f5a801d', Mfe5Element);
+customElements.define('react-component660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493', Mfe5Element);
