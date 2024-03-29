@@ -22,3 +22,6 @@ C:\Users\jdai\component-develop\react-app
 
 
 curl -H "Content-Type: application/zip"  -H "Authorization: Bearer nfp_4TLKUiyPFWys4HvH9Yu3Ad5B7nSjDqzm4376"  --data-binary "C:\Users\jdai\component-develop\react-app\dist.zip"  https://api.netlify.com/api/v1/sites
+
+[deploy to github pages]
+npm run deploy
