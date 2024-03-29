@@ -52,7 +52,29 @@ class Mfe5Element extends HTMLElement {
   connectedCallback() {
 
     let data = this.getAttribute("data");
-    let dataJson = JSON.parse(data);
+
+    let dataJson = null;
+    if(data==null){
+      //Test Mode
+      dataJson = {
+        component:{
+          content: {
+            equation: "`a+b=b+a`",
+            description:"This is the test description:"
+          },
+          ui:{
+            showDescription: true
+          }
+        },
+        runtime:{
+          data:{}
+        }
+      }
+    }
+    else{
+      dataJson = JSON.parse(data);
+    }
+
     console.log("react component input data");
     console.log(dataJson);
 
