@@ -1,31 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { MathJax, MathJaxContext } from "better-react-mathjax";
 
 const App = ({data, onUpdateData}) => {
   
-    const reactVersion = require('./package.json').dependencies['react'];
-    
-    console.log(data);
-    const config = {
-      loader: { load: ["input/asciimath"] },
-      asciimath: {
-        displaystyle: true,
-        delimiters: [
-          ["$", "$"],
-          ["`", "`"]
-        ]
-      }
-    };
-
+   
     return (
       <div>
 
-        {data.component.ui.showDescription?( <div dangerouslySetInnerHTML={{ __html: data.component.content.description }} />):<div/>}
-        <MathJaxContext config={config}>        
-        <MathJax>{data.component.content.equation}</MathJax>
-        </MathJaxContext>
-          
+      {data.component.content.htmltext}
+
+
       </div>
 
     )
@@ -59,11 +43,9 @@ class Mfe5Element extends HTMLElement {
       dataJson = {
         component:{
           content: {
-            equation: "`a+b=b+a`",
-            description:"This is the test description:"
+            htmltext: "this is the test data"
           },
-          ui:{
-            showDescription: true
+          ui:{            
           }
         },
         runtime:{

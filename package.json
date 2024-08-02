@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --port=4304 --mode=development --devtool=source-map",
-    "build": "webpack --mode=production",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && webpack serve --port=4304 --mode=development --devtool=source-map",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --mode=production",
+    "predeploy": "npm run build"   
   },
   "author": "",
   "license": "MIT",
@@ -23,9 +22,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "better-react-mathjax": "^2.0.3",
-    "copy-webpack-plugin": "^8.1.1",
-    "gh-pages": "^6.1.1",
+    
+    "copy-webpack-plugin": "^8.1.1",    
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }
