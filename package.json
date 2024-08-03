@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf dist",
     "start": "set NODE_OPTIONS=--openssl-legacy-provider && webpack serve --port=4304 --mode=development --devtool=source-map",
     "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --mode=production",
     "predeploy": "npm run build"
