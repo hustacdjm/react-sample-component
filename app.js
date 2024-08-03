@@ -65,4 +65,4 @@ class Mfe5Element extends HTMLElement {
 
 }
 
-customElements.define('react-component660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493', Mfe5Element);
+customElements.define('react-react660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493', Mfe5Element);
