@@ -21,7 +21,15 @@ module.exports = options => {
                 cacheDirectory: true,
                 presets: ['@babel/react', '@babel/env']
               }
-            },
+            }
+          ],
+        },
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader', // Injects styles into DOM
+            'css-loader',   // Resolves CSS imports
+            'postcss-loader' // Processes CSS with PostCSS (including Tailwind)
           ],
         },
       ],

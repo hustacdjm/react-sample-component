@@ -1,17 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import './index.css'
 
 const App = ({data, onUpdateData}) => {
   
    
     return (
-      <div>
-
-      {data.component.content.htmltext}
-
-
-      </div>
-
+      
+        <div className="text-3xl mt-4 font-bold underline">
+          {data.component.content.htmltext}
+        </div>
+      
     )
   
 }
