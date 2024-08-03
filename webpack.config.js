@@ -44,7 +44,7 @@ module.exports = options => {
           library: { type: "var", name: REGISTER_KEY },
           filename: `remoteEntry-${REGISTER_KEY}.js`,
           exposes: {
-            [`./${REGISTER_KEY}`]: './app.js',
+            [`./${REGISTER_KEY}`]: `./${REGISTER_KEY}.js`,
           },        
           shared: ["react", "react-dom"]
         }),
