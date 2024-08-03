@@ -50,7 +50,7 @@ class Mfe5Element extends HTMLElement {
         runtime:{
           data:{}
         }
-      }
+      };
     }
     else{
       dataJson = JSON.parse(data);
