@@ -1,6 +1,8 @@
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
+const REGISTER_KEY='react660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493';
+
 module.exports = options => {
   return {
     entry: './index.js',
@@ -36,13 +38,13 @@ module.exports = options => {
     },
     plugins: [
       new ModuleFederationPlugin({
-        
+
           // For remotes (please adjust)
-          name: "react660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493",
-          library: { type: "var", name: "react660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493" },
-          filename: "remoteEntry.js", // <-- Meta Data
+          name: REGISTER_KEY,
+          library: { type: "var", name: REGISTER_KEY },
+          filename: `remoteEntry-${REGISTER_KEY}.js`,
           exposes: {
-              './react660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493': './app.js',
+            [`./${REGISTER_KEY}`]: './app.js',
           },        
           shared: ["react", "react-dom"]
         }),

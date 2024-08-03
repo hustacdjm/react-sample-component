@@ -1,2 +1,76 @@
+<style>
+
+#template-name {
+    
+    font-size: 2em;         /* Same font size as h1 */
+    font-weight: bold;      /* Make the text bold */
+    line-height: 1.2;       /* Adjust line height */
+    color: #333;            /* Set text color */
+    margin: 0 0 0.5em 0;    /* Margin around the text */
+}
+
+#template-description {
+    /* Existing styles */
+}
+
+#template-version {
+    /* Existing styles */
+}
+
+/* New styles for the styled div */
+#styled-div {
+    border: 2px dashed #000; /* Dashed border */
+    border-radius: 10px;     /* Rounded corners */
+    padding: 10px;           /* Optional: add some padding */
+    margin: 10px 0;          /* Optional: add some margin */
+    background-color: #f9f9f9; /* Optional: add a background color */
+}
+
+#container {
+    
+    padding: 10px;           /* Optional: add some padding */
+    margin: 30px 0;          /* Optional: add some margin */
+    
+
+}
+
+</style>
+
+<div id="container">
+
+<div id="template-name">Loading...</div>
+
+<div id="template-description">Loading...</div>
+
+<div  id="template-version">Loading...</div>
+
+<div id="styled-div">
+
 <react-component660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493></react-component660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493>
 <script src="./bundle.js"></script>
+
+</div>
+
+</div>
+
+<!-- Inline JavaScript to set the template name -->
+<script>
+    // Define the template object
+    var template = {
+        name: 'React Sample component',
+        description: 'react sample component',
+        version: 'v1.0'
+    };
+
+    // Get the element where you want to display the name
+    var nameElement = document.getElementById('template-name');
+    nameElement.textContent = template.name;
+
+    var descriptionElement = document.getElementById('template-description');
+    descriptionElement.textContent = template.description;
+
+    var versionElement = document.getElementById('template-version');
+    versionElement.textContent = 'Version: ' +  template.version;
+
+
+</script>
