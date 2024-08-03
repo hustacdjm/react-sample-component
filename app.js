@@ -40,16 +40,7 @@ class Mfe5Element extends HTMLElement {
     if(data==null){
       //Test Mode
       dataJson = {
-        component:{
-          content: {
-            htmltext: "this is the test data"
-          },
-          ui:{            
-          }
-        },
-        runtime:{
-          data:{}
-        }
+        
       };
     }
     else{
