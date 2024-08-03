@@ -8,7 +8,7 @@ const App = ({data, onUpdateData}) => {
     return (
       
         <div className="text-3xl mt-4 font-bold underline">
-          {data.component.content.htmltext}
+         Develop the React Component
         </div>
       
     )
