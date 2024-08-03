@@ -39,9 +39,7 @@ class Mfe5Element extends HTMLElement {
     let dataJson = null;
     if(data==null){
       //Test Mode
-      dataJson = {
-        
-      };
+      dataJson={};
     }
     else{
       dataJson = JSON.parse(data);
