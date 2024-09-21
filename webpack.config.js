@@ -5,6 +5,14 @@ const REGISTER_KEY='react660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f49
 
 module.exports = options => {
   return {
+    stats: {
+      warningsFilter: (warning) => {
+        if (warning.message.includes('No required version specified and unable to automatically determine one')) {
+          return true;
+        }
+        return false;
+      },
+    },
     entry: './index.js',
     output: {
       filename: 'bundle.js',
