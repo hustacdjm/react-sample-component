@@ -48,6 +48,8 @@ class Elementreact660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493 exten
   constructor(){
     super();
     this.dataState = null;
+      // Bind the setDataState method to ensure `this` refers to the component instance.
+      this.setDataState = this.setDataState.bind(this);
   }
 
   getDataState(){
