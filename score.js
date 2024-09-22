@@ -13,8 +13,7 @@ export const fetchScore = (data, env) => {
             'X-Asynmous-User-ID':'X-Asynmous-API-ID'
           };            
       }
-  
-      
+        
 
     return fetch(env.ScoreUrl, {
         method: 'POST',

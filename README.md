@@ -25,3 +25,9 @@ curl -H "Content-Type: application/zip"  -H "Authorization: Bearer nfp_4TLKUiyPF
 
 [deploy to github pages]
 npm run deploy
+
+
+[Install React MUI]
+
+
+[Install React Icon]
