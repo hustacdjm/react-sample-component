@@ -65,7 +65,7 @@ class Elementreact660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493 exten
   connectedCallback() {
 
     let data = this.getAttribute("data");
-    let evn = this.getAttribute("env");
+    let env = this.getAttribute("env");
 
     let dataJson = null;
     let envJson = null;
@@ -92,7 +92,7 @@ class Elementreact660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493 exten
       dataJson = JSON.parse(data);
     }
 
-    if(envJson==null){
+    if(env==null){
       envJson={
         'Authorized': 'X-Asynmous-User-ID',
         'ScoreUrl': 'http://localhost:8081/v3/edu/ReactiveComponentRuntime/score'
