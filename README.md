@@ -18,6 +18,6 @@ npm run build
 
 
 [Install React MUI]
-
+npm install @mui/material @emotion/react @emotion/styled
 
 [Install React Icon]
