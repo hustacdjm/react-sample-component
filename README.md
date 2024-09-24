@@ -21,3 +21,4 @@ npm run build
 npm install @mui/material @emotion/react @emotion/styled
 
 [Install React Icon]
+npm install react-icons --save
