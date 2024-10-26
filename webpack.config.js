@@ -60,7 +60,9 @@ module.exports = options => {
           patterns: [
             {
               from: './*.html'
-            }
+            },
+            { from: '_headers'}, // Adjust path as necessary
+            { from: 'CORS'}, // Adjust path as necessary
           ]
         })
     ],

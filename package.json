@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "start": "set NODE_OPTIONS=--openssl-legacy-provider && webpack serve --port=4304 --mode=development --devtool=source-map",
-    "build": "rimraf dist && set NODE_OPTIONS=--openssl-legacy-provider && webpack --mode=production && copyfiles -u 1 _headers dist/ && copyfiles -u 1 CORS dist/",
+    "build": "rimraf dist && set NODE_OPTIONS=--openssl-legacy-provider && webpack --mode=production",
     "predeploy": "npm run build"
   },
   "author": "",
