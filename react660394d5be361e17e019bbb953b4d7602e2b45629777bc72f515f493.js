@@ -1,10 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import './index.css'
 import ScoreComponent from './score.component'
 
 const App = ({data, env, onUpdateData}) => {
     
+   console.log("React version:", React.version);
+
     return (
       <>
         <ScoreComponent 
@@ -79,8 +81,8 @@ class Elementreact660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493 exten
 
     console.log("react component input data");
     console.log(dataJson);
-
-    ReactDOM.render(<App data={dataJson} env={envJson} onUpdateData={this.setDataState}/>, this);
+    const root = ReactDOM.createRoot(this);
+    root.render(<App data={dataJson} env={envJson} onUpdateData={this.setDataState}/>);
   }
 
 

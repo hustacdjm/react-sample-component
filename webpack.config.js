@@ -1,5 +1,8 @@
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const deps = require("./package.json").dependencies;
+const mf = require("@angular-architects/module-federation/webpack");
+const share = mf.share;
 
 const REGISTER_KEY='react660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493';
 
@@ -53,8 +56,11 @@ module.exports = options => {
           filename: `remoteEntry-${REGISTER_KEY}.js`,
           exposes: {
             [`./${REGISTER_KEY}`]: `./${REGISTER_KEY}.js`,
-          },        
-          shared: ["react", "react-dom"]
+          }, 
+          shared: share({   
+             "react": { singleton: true, eager: true, requiredVersion: deps.react },
+             "react-dom": { singleton: true, eager: true, requiredVersion: deps["react-dom"] }
+          })
         }),
         new CopyWebpackPlugin({
           patterns: [
