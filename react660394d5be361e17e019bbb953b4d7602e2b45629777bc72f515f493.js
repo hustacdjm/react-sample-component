@@ -83,6 +83,9 @@ class Elementreact660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493 exten
     console.log(dataJson);
     const root = ReactDOM.createRoot(this);
     root.render(<App data={dataJson} env={envJson} onUpdateData={this.setDataState}/>);
+
+    // Expose getReactVersion function to the custom element
+    this.getReactVersion = () => React.version;
   }
 
 
