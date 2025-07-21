@@ -9,11 +9,7 @@ const App = ({data, env, onUpdateData}) => {
 
     return (
       <>
-        <ScoreComponent 
-        data={data} 
-        env={env} 
-        onUpdateData={onUpdateData}         
-        ></ScoreComponent>
+        <div>develop the react component</div>
       </>
     )
   
@@ -68,9 +64,11 @@ class Elementreact660394d5be361e17e019bbb953b4d7602e2b45629777bc72f515f493 exten
     }
 
     if(env==null){
-      envJson={
-        'Authorized': 'X-Asynmous-User-ID',
-        'ScoreUrl': 'http://localhost:8081/v3/edu/ReactiveComponentRuntime/score'
+      envJson={        
+        header:{
+          'Content-Type': 'application/json',  // Example header
+          'component-api-key': 'component_api_key_value'
+        }        
       }
     }
     else{
